@@ -1,0 +1,59 @@
+Addition
+
+x1, y1, x2, y2 <- x and y dimensions of the input two matrices
+
+if x1 != x2 or y1 != y2
+return can't add
+
+x <- x1
+y <- y1
+
+for every x
+    for every y
+	 new matrix[x, y] <- matrix1[x, y] + matrix2[x, y]
+
+return new matrix
+
+
+
+Subtraction
+
+x1, y1, x2, y2 <- x and y dimensions of the two input matrices
+
+if x1 != x2 or y1 != y2
+return can't subtract
+
+x <- x1
+y <- y1
+
+for 1 to x
+    for 1 to y
+	 new matrix[x, y] <- matrix1[x, y] - matrix2[x, y]
+
+return new matrix
+
+
+
+Multiplication
+
+x1, y1, x2, y2 <- x and y dimensions of the two matrices
+
+if y1 != x1
+return can't multiply
+
+x = x1
+y = y2
+z = x2
+
+for 1 to x
+    for 1 to y
+	new matrix[x,y] <- 0
+	    for 1 to z
+		new matrix[x, y] = new matrix[x, y] + matrix1[x, z] * matrix2[z, y]
+
+return new matrix
+	     
+
+
+Runtime is O(n^3)
+
